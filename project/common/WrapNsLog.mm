@@ -1,7 +1,7 @@
 #import "WrapNsLog.h"
 #import <Foundation/Foundation.h>
 
-namespace nslog {
+namespace logExtension {
 	int nsLogWrapper(const char* message) {
         NSLog(@"%@", str);
 		return 0;

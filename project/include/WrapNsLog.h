@@ -1,5 +1,5 @@
 #import <hx/CFFI.h>
 
-namespace nslog {
+namespace logExtension {
 	int nsLogWrapper(const char* message);
 }

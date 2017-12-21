@@ -1,6 +1,6 @@
 #include "WrapNsLog.h"
 
-using namespace nslog;
+using namespace logExtension;
 
 static value nslog (value message) {
 	return alloc_int(nsLogWrapper(val_string(message)));
