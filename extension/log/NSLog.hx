@@ -9,5 +9,5 @@ class NSLog
         objc_call_nslog(message);
     }
 
-    private static var objc_call_nslog = Lib.load ("test", "test_nslog", 0);
+    private static var objc_call_nslog = Lib.load ("logExtension", "nslog", 1);
 }
