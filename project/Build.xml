@@ -1,5 +1,30 @@
-<files id="common">
-   <compilerflag value="-Iinclude"/>
-   <file name="common/ExternalInterface.cpp"/>
-   <file name="common/WrapNsLog.mm"/>
-</files>
+<xml>
+    <files id="common">
+    <compilerflag value="-Iinclude"/>
+    <file name="common/ExternalInterface.cpp"/>
+    <file name="common/WrapNsLog.mm"/>
+    </files>
+
+
+    <target id="NDLL" output="${LIBPREFIX}logExtension${debug_extra}${LIBEXTRA}" tool="linker" toolid="${STD_MODULE_LINK}">
+
+        <outdir name="../ndll/${BINDIR}"/>
+
+        <ext value=".ndll" if="windows || mac || linux" />
+
+        <files id="common"/>
+        <files id="iphone" if="iphone"/>
+
+        <section if="blackberry">
+            <files id="blackberry" />
+            <compilerflag value="-DBLACKBERRY" />
+            <lib name="-lbps" />
+            <lib name="-lc" />
+        </section>
+
+    </target>
+
+    <target id="default">
+        <target id="NDLL" if="iphone" />
+    </target>
+</xml>
