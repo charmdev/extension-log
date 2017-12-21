@@ -3,7 +3,7 @@
 
 namespace logExtension {
 	int nsLogWrapper(const char* message) {
-        NSLog(@"%@", str);
+        NSLog(@"%@", message);
 		return 0;
 	} 
 }
