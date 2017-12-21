@@ -1,0 +1,5 @@
+<files id="common">
+   <compilerflag value="-Iinclude"/>
+   <file name="common/ExternalInterface.cpp"/>
+   <file name="common/WrapNsLog.mm"/>
+</files>
